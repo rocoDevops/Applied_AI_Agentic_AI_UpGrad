@@ -84,6 +84,7 @@ interest_value, total_amount = simple_interest(60000, 5, 12)
 print("Interest:", interest_value)
 print("Final amount:", total_amount)
 
+#Calculating area of a circle using function. Default Value can be changed. Fixed value can't be changed.
 def calculate_area(radius):
     area = 3.14 * radius ** 2
     return area
@@ -91,3 +92,10 @@ def calculate_area(radius):
 circle_area = calculate_area(5)
 print("Area of the circle:", circle_area)
 
+#Input number can be multiple.
+def add (*args):
+    ls = list(args) # args can also be stored as tuple
+    res = sum(ls) #sum is a python bult-in function.
+    return res
+add (3,4,43,5,6,7,8,9,10)
+print("Addition of multiple numbers:", add(3,4,43,5,6,7,8,9,10))
