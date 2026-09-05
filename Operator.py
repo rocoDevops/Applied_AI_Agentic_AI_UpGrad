@@ -220,6 +220,76 @@ user_score = 0
 score_message = user_score or "No score available"
 print("Score message:", score_message)
 
+#What do logical operators return when comparing two thruthy or falsy values
+#An and operator needs both values to be Truthy for a True output. 
+#So, it is not enough taht it checks for just the first thruthy value. I will therefore:
+#Return the first falsy value if any values is falsy or
+#return the last truthy value if all values are truthy.
+#Non Boolean in Nature "AND" operator
+print("Expression:", bool('') and bool(0))
+print("Thruthy and Falsy Value: ", '' and 0) #It returns the first falsy values. 
+#If any of them are falsy python will catch the fisrt falsy value and return.
+print("Expression 1st Truthy Value: ", "abc" and "cdf")
+print("Expression Thurthy ---> Falsy AND Operator:", "abc" and 0)
+#"OR" Operator Non Boolean
+print("Expression:", '' or 0)#both falsy the return last falsy
+#Always returns the first thruthy values no need to check after that
+print("Expression Truthy ---> Falsy OR operator:", "abc" or 0)#It returns the first truthy value
+print("Expression Thruthy ---> Thruthy OR Operator:" "abd" or "cdf")
+print("Expression Falsy ---> Thruthy OR operator:", 0 or "acs")
+print("Expression Falsy ---> Falsy OR Operator:", 0 or '')
+#NOT Operator will always return the opposite boolean: True if falsy and false if thruthy
+print("Expression ", not 0)
+print("Expression ", not 123)
+#not>and>or
+#Truthy and falsy describe how Python treats any value in a condition. They are not separate data types.
+#True and False are actual Boolean values:
+#Membership Operator
+#We can check if a value belongs to a collection. A collection can store multiple values. 
+#The "in" membership operator checks if value belongs to a collection.
+print("a in abc:", 'a' in 'abc')
+print("a not in abc:", 'a' not in 'abc')
+
+#Bitwise Operator
+number2 = 23
+print("Decimal to Binary:", bin(number2))
+#Bitwise "AND" operator:
+a2 = 5
+b2 = 3
+result = a2 & b2
+print("Bitwise AND operator:", result)#Operator is performing AND logic on each bit. Reading from right to left
+result1 = a2 | b2
+print("Bitwise OR operator:", result1)
+result2 = a2 ^ b2
+print("Bitwise XOR operator:", result2)#It will return 1 if one side value is different. 
+#Suppose 0 & 1 it will reteun 1 but for 1 & 1 it will return 0
+#Identity Operator is used to check if teh memory addressess of 
+#the two objects that is if the two objects reference the same location in memory. 
+#"is" and "is not" are the identity operator
+first_value = 'Hello World!'
+second_value = first_value
+thrird_value = 'hello World!'
+print(first_value is second_value)
+print(first_value is thrird_value)
+#We can check the memory address using the id() function
+print(id(first_value))
+print(id(second_value))
+#What will be the output of the following code snippet?
+print(4 % 100, 4 // 100, 4 / 100) #output will be 4, 0, 0.04. 
+#The first operator is modulus which returns the remainder of the division of 4 by 100 which is 4. 
+#The second operator is floor division which returns the largest integer less than or equal 
+#to the result of the division of 4 by 100 which is 0. 
+#The third operator is regular division which returns the result of the division of 4 by 100 which is 0.04.
+#Consider the following logical statements:
+print('Hi' == 'Hello' and 25 > 13)
+print('Hi' != 'Hello' and 25 > 13)
+print('Hi' == 'Hello' or 25 < 13)
+print(not('Hi' == 'Hello') and 25 > 13)
+print(not(('Hi' != 'Hello') or 25 < 13))
+
+
+
+
 
 
 
